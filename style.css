@@ -74,16 +74,14 @@
             padding: 20px;
         }
 
-        #olaUser>h2 span{
-            color: rgb(0, 0, 170);
+        #olaUser>h2 span:hover{
+            transition: 0.2s ease;
+            color: rgb(0, 0, 252);
+            cursor: default;
         }
         /* Pointer */
         #boasVindas>a {
             cursor: default;
-        }
-
-        #noticiaDoDia>img {
-            cursor: pointer;
         }
 
         /**/
@@ -92,10 +90,16 @@
             display: flex;
             margin: 5px 20px;
             padding: 10px;
+            transition: 0.4s ease;
+        }
+
+        #noticiaDoDia:hover {
+            transform: scale(1.05);
         }
 
         #noticiaDoDia>img{
             height: 40vh;
+            cursor: pointer;
             border-radius: 20px;
         }
 
@@ -127,8 +131,10 @@
         }
 
         #main {
-            display:flex
+            display:flex;
+            position: relative;
         }
+
 
         #caixaDeNoticias {
             padding: 20px;
@@ -136,36 +142,87 @@
             flex-flow: row wrap;
             justify-content: center;
             align-items: flex-start;
+            position: relative;
         }
+
+        #caixaDeNoticias>h5{
+            font: 400 1.3em poppins, arial;
+            color: rgb(0, 0, 255);
+            position: absolute;
+            top: -43px;
+            right: 0;
+            border-radius: 15px;
+            background: url(imgs/seta.png) no-repeat right;
+            background-size: 40px;
+            transition: 0.3s ease;
+        }
+
+
+        #caixaDeNoticias>h5 a{
+            color: rgb(0, 57, 163);
+            padding: 5px 45px 5px 15px;
+            width: fit-content;
+            display: inline-block;
+            
+        }
+
+        #caixaDeNoticias>h5:hover{
+            transform: scale(1.05);
+        }
+
 
         .noticia>a{
             border: none;
             display: flex;
             flex-flow: column wrap;
-            align-items: center;
-            border: 2px solid rgb(216, 216, 216);
-            padding: 20px;  
-            width: 450px;
+            padding: 15px;  
+            width: 280px;
             border-radius: 15px;
             margin: 0 15px 15px 15px;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        .noticia>a:hover{
+            transform: scale(1.05);
+            background-color: aliceblue;
+           
         }
 
         .noticia h1{
-            font: 500 1.05em poppins, arial;
+            font: 500 1em poppins, arial;
             text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .noticia p {
+            font: 400 0.8em poppins, arial;
+            color: rgb(85, 85, 85);
+            text-align: justify;
         }
 
         .noticia img{
             margin: 0 auto 20px auto;
             border-radius: 15px;
-            width: 300px;
-            height: 190px;
+            width: 250px;
+            height: 130x;
         }
+
+        .noticia span{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: gray;
+            font: 300 0.8em poppins, arial;
+            margin: 10px;
+        }
+
+        
 
         /* Aside */
 
         aside{
-            padding: 20px;
+            padding: 25px 10px;
             display: flex;
             flex-flow: column wrap;
             align-items: flex-end;
@@ -179,10 +236,44 @@
             height: 35vh;
             width: fit-content;
         }
-
+        
         /* footer */
+        footer {
+            background-color: rgba(0, 44, 138, 0.247);
+            height: 20vh;
+            border-top: 1px solid rgb(153, 153, 153);
+        }
 
+        footer>.margem{
+            display: flex;
+            flex-flow: row wrap;
+            height: 20vh;
+            align-items: center;
+        }
 
+        footer img{
+            width: 300px;
+        }
+
+        #botoesFooter{
+            margin:0 30px;
+        }
+
+        footer button {
+            border: none;
+            background-color: transparent;
+            margin: 10px;
+        }
+
+        footer button img{
+            width: 50px;
+        }
+
+        #informacoesFooter, #informacoesFooter>ul{
+            list-style-type: none;
+            flex: 1;
+            text-align: center;
+        }
 
         /* Propriedades Gerais */
         a{
@@ -193,10 +284,186 @@
         h2{
             font: 600 2em poppins, arial;
             text-align: center;
+            color: rgb(0, 0, 0);
         }
 
-        /* footer */
-        footer {
-            background-color: gray;
-            height: 20vh;
+        /*     RESPONSIVIDADE    */
+        
+        @media (max-width: 1400px) {
+
+            #noticiaDoDia>img {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            }
+
+            .margem {
+                width: 90%;
+            }
+            
+            #noticiaDoDia {
+                padding: 10px;
+                flex-flow: row wrap;
+            }
+
+            #noticiaDoDia>section>h3 {
+                font-size: 3em;
+                margin: 20px;
+            }
+
+            #noticiaDoDia p{
+                font-size: 1.5em;
+                margin-bottom: 40px;
+            }
+ 
+            aside {
+                display: none; 
+            }
+ 
+            #main {
+                flex-direction: column;
+            }
         }
+ 
+        @media (max-width: 1000px) {
+            .margem {
+                width: 95%;
+            }
+ 
+            header>.margem {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+ 
+            hr {
+                display: none;
+            }
+ 
+            #menuCabecalho {
+                padding: 5px 0;
+            }
+ 
+            #menuCabecalho>ul {
+                justify-content: center;
+            }
+ 
+            #menuCabecalho a {
+                margin: 5px;
+                font-size: 0.9em;
+            }
+ 
+            #noticiaDoDia {
+                flex-direction: column;
+                align-items: center;
+                margin: 5px;
+            }
+ 
+            #noticiaDoDia>img {
+                
+                max-width: 100%;
+                width: 100%;
+            }
+ 
+            #noticiaDoDia>section {
+                margin: 15px 0 0 0;
+                gap: 15px;
+            }
+ 
+            #noticiaDoDia>section>h3 {
+                font-size: 1.5em;
+                text-align: center;
+            }
+
+            #noticiaDoDia p{
+                font-size: 1em;
+            }
+ 
+            #olaUser {
+                margin: 15px 0;
+            }
+            
+            #caixaDeNoticias h5{
+                position: relative;
+                margin: 50px 0 10px 0;
+                order: 1;
+            }
+
+            .noticia>a {
+                width: 100%;
+                max-width: 340px;
+            }
+ 
+            .noticia img {
+                width: 100%;
+            }
+ 
+            h2 {
+                font-size: 1.5em;
+            }
+ 
+            footer>.margem {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 20px 0;
+                gap: 15px;
+            }
+ 
+            footer img {
+                width: 200px;
+            }
+ 
+            #informacoesFooter ul {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+ 
+        @media (max-width: 480px) {
+            header>.margem>img {
+                width: 120px;
+            }
+ 
+            #menuCabecalho a {
+                font-size: 0.8em;
+                padding: 4px 6px;
+                margin: 4px;
+            }
+ 
+            #noticiaDoDia:hover {
+                transform: none; 
+            }
+ 
+            .noticia>a:hover {
+                transform: none;
+            }
+ 
+            #noticiaDoDia>section>h3 {
+                font-size: 1.2em;
+            }
+ 
+            .noticia>a {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 15px 0;
+            }
+ 
+            .noticia img {
+                width: 100%;
+                height: 180px;
+            }
+ 
+            #caixaDeNoticias {
+                padding: 10px;
+            }
+ 
+            footer img {
+                width: 150px;
+            }
+ 
+            footer button img {
+                width: 35px;
+            }
+        }
+
