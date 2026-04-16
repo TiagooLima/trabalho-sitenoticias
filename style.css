@@ -73,6 +73,10 @@
             text-align: center;
             padding: 20px;
         }
+
+        #olaUser>h2 span{
+            color: rgb(0, 0, 170);
+        }
         /* Pointer */
         #boasVindas>a {
             cursor: default;
@@ -129,33 +133,33 @@
         #caixaDeNoticias {
             padding: 20px;
             display: flex;
-            flex-wrap: wrap;
+            flex-flow: row wrap;
             justify-content: center;
+            align-items: flex-start;
         }
 
-        .noticia{
+        .noticia>a{
             border: none;
             display: flex;
             flex-flow: column wrap;
             align-items: center;
-            background-color: aliceblue;
+            border: 2px solid rgb(216, 216, 216);
             padding: 20px;  
-            width: 300px;
-            height: 30vh;
+            width: 450px;
             border-radius: 15px;
             margin: 0 15px 15px 15px;
         }
 
-        .noticia>h1{
+        .noticia h1{
             font: 500 1.05em poppins, arial;
             text-align: center;
         }
 
-        .noticia>img{
+        .noticia img{
             margin: 0 auto 20px auto;
             border-radius: 15px;
-            width: 95%;
-            height: 15vh;
+            width: 300px;
+            height: 190px;
         }
 
         /* Aside */
