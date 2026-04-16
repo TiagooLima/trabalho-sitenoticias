@@ -53,11 +53,18 @@
             margin: 10px;
         }
 
+        #menuCabecalho a:hover{
+            color: rgb(192, 192, 192);
+        }
+
         /* Main */
         section>.margem{
             background-color: rgb(209, 209, 209);
-            height: 100vh;
             padding: 15px 0;
+        }
+
+        main {
+            display:flex
         }
 
         #caixaDeNoticias {
@@ -73,8 +80,8 @@
             align-items: center;
             background-color: aliceblue;
             padding: 20px;  
-            width: 25%;
-            height: 40vh;
+            width: 300px;
+            height: 30vh;
             border-radius: 15px;
             margin: 0 15px 15px 15px;
         }
@@ -87,8 +94,27 @@
         .noticia>img{
             margin: 0 auto 20px auto;
             border-radius: 15px;
-            width: 300px;
-            height: 180px;
+            width: 95%;
+            height: 15vh;
+        }
+
+        /* Aside */
+
+        aside{
+            width: 45vw;
+            padding: 20px;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-end;
+        }
+
+        #previsaoDoTempo {
+            background-color: white;
+            display: flex; justify-content: center;
+            border-radius: 20px;
+            padding: 20px;
+            height: 35vh;
+            width: fit-content;
         }
 
         /* Propriedades Gerais */
@@ -98,7 +124,7 @@
         }
 
         h2{
-            font: 600 2em poppins;
+            font: 600 2em poppins, arial;
             text-align: center;
         }
 
