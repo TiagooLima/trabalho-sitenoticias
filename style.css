@@ -414,9 +414,7 @@
             }
  
             #informacoesFooter ul {
-                display: flex;
-                justify-content: center;
-                gap: 15px;
+                display: none;
             }
         }
  
