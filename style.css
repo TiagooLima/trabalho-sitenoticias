@@ -100,7 +100,9 @@ header>.margem{
 #noticiaDoDia>img{
     height: 40vh;
     cursor: pointer;
+    width: 65%;
     border-radius: 20px;
+    content: url(imgs/super-mario-filme.jpg);
 }
 
 #noticiaDoDia>section{
@@ -122,12 +124,18 @@ header>.margem{
     background-color: rgb(109, 255, 109);
     border-radius: 15px;
     cursor: pointer;
+    margin: 20px 0 0 0;
 }
 
 /* Main */
 section>.margem{
     background-color: rgb(255, 255, 255);
     padding: 15px 0;
+}
+
+section>.margem>h2{
+    text-align: left;
+    padding: 10px;
 }
 
 #main {
@@ -204,8 +212,7 @@ section>.margem{
 .noticia img{
     margin: 0 auto 20px auto;
     border-radius: 15px;
-    width: 250px;
-    height: 130x;
+    max-width: 250px;
 }
 
 .noticia span{
@@ -249,16 +256,17 @@ aside{
 
 /* footer */
 footer {
-    background-color: rgba(0, 44, 138, 0.247);
-    height: 20vh;
+    background-color: rgba(0, 153, 255, 0.486);
+    height: 21vh;
     border-top: 1px solid rgb(153, 153, 153);
 }
 
 footer>.margem{
     display: flex;
     flex-flow: row wrap;
-    height: 20vh;
+    max-height: 100%;
     align-items: center;
+    padding: 25px 0;
 }
 
 footer img{
@@ -283,6 +291,10 @@ footer button img{
     list-style-type: none;
     flex: 1;
     text-align: center;
+}
+
+#informacoesFooter li a:hover{
+    color: rgb(54, 65, 90);
 }
 
 /* Propriedades Gerais */
@@ -372,8 +384,14 @@ iframe{
 
 #materiaCompleta>ul{
     margin: 0 25px;
-    list-style-type: circle;
+    list-style-type: none;
+    border-left: 2px solid brown;
+    padding: 15px;
     font: 400 1.2em poppins,arial;
+}
+
+mark{
+    background-color: rgba(175, 200, 255, 0.651);;
 }
 
 #materiaCompleta>h3{
@@ -387,12 +405,33 @@ iframe{
 
 /*     RESPONSIVIDADE    */
 
-@media (max-width: 1350px) {
+@media (max-width:1600px){
+    #noticiaDoDia>section>h3{
+        font-size: 2em;
+        
+    }
+
+    #noticiaDoDia>section>p{
+        font-size: 1em;
+        margin: 15px 0;
+    }
+
+    #noticiaDoDia>section>button{
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 1250px) {
 
     #noticiaDoDia>img {
     cursor: pointer;
-    width: 100%;
-    height: 100%;
+    content: url(imgs/noticias/MARIO-GALAXY-MOVIE-11.jpg);
+    max-width: 45%;
+    height: 100%;;
+    }
+
+    #noticiaDoDia>section{
+        width: 45%;
     }
 
     .margem {
@@ -405,12 +444,18 @@ iframe{
     }
 
     #noticiaDoDia>section>h3 {
-        font-size: 3em;
+        font-size: 2.3em;
         margin: 20px;
+        margin: 0; padding: 0;
+    }
+
+    #noticiaDoDia>section>button{
+        padding: 20px;
+        font-size: 1em;
     }
 
     #noticiaDoDia p{
-        font-size: 1.5em;
+        font-size: 2.3em;
         margin-bottom: 40px;
     }
 
@@ -423,7 +468,7 @@ iframe{
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 850px) {
     .margem {
         width: 95%;
     }
@@ -454,17 +499,13 @@ iframe{
         flex-direction: column;
         align-items: center;
         margin: 5px;
+        
     }
 
-    #noticiaDoDia>img {
-        
-        max-width: 100%;
-        width: 100%;
-    }
+
 
     #noticiaDoDia>section {
         margin: 15px 0 0 0;
-        gap: 15px;
     }
 
     #noticiaDoDia>section>h3 {
@@ -474,6 +515,8 @@ iframe{
 
     #noticiaDoDia p{
         font-size: 1em;
+        width: 80%;
+        text-align: center;
     }
 
     #olaUser {
@@ -499,8 +542,13 @@ iframe{
         font-size: 1.5em;
     }
 
+    footer{
+        height: 100%;
+    }
+
     footer>.margem {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
         padding: 20px 0;
@@ -512,11 +560,33 @@ iframe{
     }
 
     #informacoesFooter ul {
-        display: none;
+        width: fit-content;
     }
+
+    #informacoesFooter {
+        display: flex;
+    }
+
+    #noticiaDoDia>section{
+        width: fit-content;
+    }
+
+    #noticiaDoDia>img{
+        content: url(imgs/super-mario-filme.jpg);
+        max-width: 80%;
+    }
+
+    #noticiaDoDia>section>button{
+        padding: 5px 10px;
+        font-size: 0.9em;
+        margin: 0;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
+    
+
     header>.margem>img {
         width: 120px;
     }
@@ -543,11 +613,6 @@ iframe{
         width: 100%;
         max-width: 100%;
         margin: 0 0 15px 0;
-    }
-
-    .noticia img {
-        width: 100%;
-        height: 180px;
     }
 
     .caixaDeNoticias {
