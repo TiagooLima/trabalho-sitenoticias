@@ -168,7 +168,7 @@ section>.margem>h2{
 
 .caixaDeNoticias>h5 a{
     color: rgb(0, 57, 163);
-    padding: 5px 45px 5px 15px;
+    padding: 0 45px 5px 15px;
     width: fit-content;
     display: inline-block;
     
@@ -360,7 +360,7 @@ p[type=centralizado]{
 }
 
 #materiaCompleta img[type=esquerda]{
-    margin: 0 20px 0 0px;
+    margin: 10px 20px 10px 0px;
     float: left;
     width: 550px;
 }
@@ -368,7 +368,7 @@ p[type=centralizado]{
 #materiaCompleta img[type=principal]{
     width: 60%;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .img{
@@ -522,12 +522,7 @@ mark{
     #olaUser {
         margin: 15px 0;
     }
-    
-    .caixaDeNoticias h5{
-        position: relative;
-        margin: 50px 0 10px 0;
-        order: 1;
-    }
+
 
     .noticia>a {
         width: 100%;
