@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="paginaPrincipal">
     <div id="container">
         <!--Cabeçalho-->
         <header>
@@ -21,23 +21,25 @@
                 <div id="menuCabecalho">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="">Politica</a></li>
-                        <li><a href="">Esportes</a></li>
+                        <li><a href="verTudo.html">Todas as Noticias</a></li>
                     </ul>
                 </div>
+
+                <img id="conta" src="imgs/icones/conta.png" style="width: 50px; opacity: 80%;" alt="">
 
                 <!--Pesquisa-->
             </div>
         </header>
+
+        <div id="olaUser">
+            <h2>Bem-vindo ao <span>VERTICE</span></h2>
+            <p>Encontre suas histórias mundo à fora &#127757;</p>
+        </div>
+
         <!--Principal-->
         <section>
             <div class="margem">
                 <section id="boasVindas"><!--Começo seção boas vindas-->
-
-                    <div id="olaUser">
-                        <h2>Bem-vindo ao <span>VERTICE</span></h2>
-                        <p>Encontre suas histórias mundo à fora &#127757;</p>
-                    </div>
 
                     <a href="marioGalaxy.html">
                         <div id="noticiaDoDia">
@@ -58,7 +60,7 @@
                             <div class="noticia" >
                                 <a href="noticiaMoraes.html" >
                                     <img src="imgs/imagemTeste.png" alt="" >
-                                    <h1 >Moraes abrir inquérito contra Flávio após calunia contra lula </h1>
+                                    <h1 >Inquérito contra Flávio após calunia contra lula</h1>
                                     <p>Alexandre de Moraes determina abertura de inquérito contra Flávio Bolsonaro após post sobre Lula</p><br>
                                     <span>15/04/2026 - 06h30</span>
                                 </a>
@@ -75,9 +77,9 @@
 
                             <div class="noticia" >
                                 <a href="goleiroInglaterra.html" >
-                                    <img src="imgs/noticias/acidente-goleiro-morte.avif"  alt="">
+                                    <img src="imgs/noticias/acidente-goleiro-morte.jpg"  alt="">
                                     <h1>Goleiro da inglaterra morre em acidente de trânsito</h1>
-                                    <p>Acidente fatal aconteceu na Aústria. O ex-goleiro de 48 anos já havia jogado no arsenal, juventus e liverpool.</p><br>
+                                    <p>Acidente fatal aconteceu na Aústria. O ex-goleiro de 48 anos já havia jogado em times importantes</p><br>
                                     <span>16/04/2026 - 11h50</span>
                                 </a>
                             </div>
@@ -97,15 +99,30 @@
                                     <h1>João Fonseca nas quartas de final do ATP 500 de Munique</h1>
                                     <p>Brasileiro enfrenta americano Ben Shelton, atual número seis do mundo, pelas quartas da competição </p><br> 
                                     <span>16/04/2026 - 11h03</span>
-                    
+                                </a>
+                            </div>
+
+                            <div class="noticia" >
+                                <a href="oscarShmdtd.html" >
+                                    <img src="imgs/noticias/Oscar schmidt.jpg"  alt="">
+                                    <h1>Morre Oscar Schmidt, lenda do basquete, aos 68 anos</h1>
+                                    <p>Ex-jogador de 68 anos não resistiu após ter um mal-estar em Santana de Parnaíba (SP)</p><br> 
+                                    <span>17/04/26 - 16h46</span>
+                                </a>
+                            </div>
+
+                            <div class="noticia">
+                                <a href="marioGalaxy.html">
+                                    <img src="imgs/noticias/Bang-Sihyuk-HYBE.jpg" alt="">
+                                    <h1>Polícia pede prisão do fundador de agência do BTS</h1>
+                                    <p>Bang Si-hyuk é suspeito de negociações ilegais na abertura de capital da empresa.</p><br>
+                                    <span>31/03/2026 - 16h00</span>
                                 </a>
                             </div>
                         
                         </div>
                         <aside>
-                            <div id="previsaoDoTempo">
-                                <iframe src="https://www.meteoblue.com/pt/tempo/widget/daily/?geoloc=detect&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&days=4&coloured=coloured&pictoicon=1&maxtemperature=1&mintemperature=1&windspeed=1&windgust=0&winddirection=0&uv=0&humidity=0&precipitation=1&precipitationprobability=1&spot=0&pressure=0&layout=light&user_key=b2840e806b93308f&embed_key=cbf75a941f8e9ed1&sig=16cd2ceb986def3e2aa1692a27ae73efceaf0caf884a4e82009f6ad81ed22eb1" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="font-family: poppins; width: 216px; height: 348px; border: 0;overflow: hidden;"></iframe><div></div>
-                            </div>
+                            <!--Previsao do tempo-->
                         </aside>
                     </main>
             </div>
@@ -132,11 +149,11 @@
                 <div id="informacoesFooter">
                     <ul>
                         <li><a href="index.html">Página pricipal</a></li>
-                        <li><a href="">Esportes</a></li>
-                        <li><a href="">Politica</a></li>
                         <li><a href="verTudo.html">Todas as Noticias</a></li>
                     </ul>
                 </div>
+
+                <p>Site criado por<br>Tiago Lima</p>
 
             </div>
         </footer>

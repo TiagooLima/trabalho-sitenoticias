@@ -13,6 +13,7 @@
 
 :root{
     --cor-principal-cinza: rgb(255, 255, 255);
+    --cor-azulada: rgba(101, 211, 248, 0.651);
 }
 
 /* Layout */
@@ -25,8 +26,8 @@
 /*Cabeçalho*/
 
 header {
-    border-bottom: 1px solid rgb(196, 196, 196);
-    background-color: var(--cor-principal-cinza);
+    background-color: white;
+    border-bottom: 1px solid rgb(0, 107, 126);
     padding: 10px 0;
 }
 
@@ -36,7 +37,7 @@ header>.margem>img {
 
 hr{
     margin: 0 10px;
-    border: 1px solid rgb(209, 209, 209);
+    border: 1px solid rgb(7, 86, 92);
     border-radius: 10px;
 }
 
@@ -56,22 +57,26 @@ header>.margem{
 }
 
 #menuCabecalho a{
-    font: 600  1em 'Noto Serif';
-    color: rgb(0, 30, 161);
+    font: 600  1em poppins;
+    color: rgb(7, 86, 92);
     padding: 5px 10px;
     margin: 10px;
 }
 
 #menuCabecalho a:hover{
-    color: rgb(32, 129, 255);
+    color: rgb(67, 137, 228);
 }
 /* Seção de boas vindas */
 #olaUser {
-    background-color: rgb(235, 235, 235);
-    margin: 30px;
-    border-radius: 30px;
+    background-color: rgb(173, 235, 255);
     text-align: center;
-    padding: 20px;
+    border-bottom: 1px solid rgb(0, 107, 126);
+    padding: 7vh;
+}
+
+#olaUser h2, #olaUser p, #olaUser span{
+    
+    font-family: "Noto Serif";
 }
 
 #olaUser>h2 span:hover{
@@ -90,11 +95,6 @@ header>.margem{
     display: flex;
     margin: 5px 20px;
     padding: 10px;
-    transition: 0.4s ease;
-}
-
-#noticiaDoDia:hover {
-    transform: scale(1.05);
 }
 
 #noticiaDoDia>img{
@@ -114,15 +114,16 @@ header>.margem{
 }
 
 #noticiaDoDia>section>h3{
-    font: 700 3em poppins;
+    font: 600 2.7em "Noto Serif", sans-serif;
 }
 
 #noticiaDoDia button {
     padding: 10px 20px;
     width: fit-content;
-    border: 2px solid rgb(55, 209, 55);
-    background-color: rgb(109, 255, 109);
+    border: 2px solid rgb(87, 157, 248);
+    background-color: rgb(102, 173, 255);
     border-radius: 15px;
+    color: black;
     cursor: pointer;
     margin: 20px 0 0 0;
 }
@@ -183,12 +184,14 @@ section>.margem>h2{
     border: none;
     display: flex;
     flex-flow: column wrap;
-    padding: 15px;  
-    width: 280px;
+    width: 300px;
     border-radius: 15px;
     margin: 0 15px 15px 15px;
     transition: 0.3s ease;
     position: relative;
+    border: 2px solid rgba(125, 222, 255, 0.295);
+    border-left: 10px solid rgb(60, 166, 173);
+    padding: 15px;
 }
 
 .noticia>a:hover{
@@ -198,7 +201,7 @@ section>.margem>h2{
 }
 
 .noticia h1{
-    font: 500 1em poppins, arial;
+    font: 700 1em "Noto serif";
     text-align: center;
     margin-bottom: 8px;
 }
@@ -227,14 +230,26 @@ section>.margem>h2{
 /* Ver Tudo */
 .verTudo>h2{
     text-align: left;
+    border-left: 2px solid rgba(60, 165, 173, 0.829);
+    padding: 0 0 0 20px;
+    margin-bottom: 15px;
 }
 
 .verTudo .caixaDeNoticias{
-    justify-content: flex-start;
     padding: 5px;
 }
 
+.politica>.noticia>a{
+    border-left: 10px solid rgb(60, 166, 173);
+}
 
+.esportes>.noticia>a{
+    border-left: 10px solid rgb(60, 173, 79);
+}
+
+.pop>.noticia>a{
+    border-left: 10px solid rgb(122, 60, 173);
+}
 
 /* Aside */
 
@@ -256,7 +271,7 @@ aside{
 
 /* footer */
 footer {
-    background-color: rgba(0, 153, 255, 0.486);
+    background-color: rgba(101, 211, 248, 0.651);
     height: 21vh;
     border-top: 1px solid rgb(153, 153, 153);
 }
@@ -294,7 +309,17 @@ footer button img{
 }
 
 #informacoesFooter li a:hover{
-    color: rgb(54, 65, 90);
+    color: rgb(52, 105, 175);
+}
+
+#informacoesFooter li a{
+    color: rgb(5, 56, 59);
+    font: 650 1em "Noto Serif";
+}
+
+footer p{
+    text-align: end;
+    font: 650 1em "Noto Serif";
 }
 
 /* Propriedades Gerais */
@@ -303,8 +328,8 @@ a{
     color: black;
 }
 
-h2{
-    font: 600 2em poppins, arial;
+h2, h3, h4{
+    font: 800 2em "Noto Serif";
     text-align: center;
     color: rgb(0, 0, 0);
 }
@@ -341,6 +366,7 @@ p[type=centralizado]{
     margin-bottom: 20px;
 }
 
+
 #materiaCompleta span{
     color: gray;
     font: 300 0.8em poppins, arial;
@@ -350,32 +376,27 @@ p[type=centralizado]{
     text-decoration: underline;
     font: 500 1em poppins, arial;
     color: rgb(0, 0, 133);
-    
 }
 
 #materiaCompleta img[type=direita]{
     margin: 0 0 0 20px;
     float: right;
-    width: 550px;
+    width: 45%;
+    border-radius: 20px;
 }
 
 #materiaCompleta img[type=esquerda]{
-    margin: 10px 20px 10px 0px;
+    margin: 10px 20px 20px 0px;
     float: left;
-    width: 550px;
+    width: 45%;
+    border-radius: 20px;
 }
 
 #materiaCompleta img[type=principal]{
-    width: 60%;
+    width: 65%;
     display: block;
     margin: 20px auto;
-}
-
-.img{
-    width: fit-content;
-    text-align: center;
-    margin: 20px;
-    float: right;
+    border-radius: 20px;
 }
 
 iframe{
@@ -385,7 +406,7 @@ iframe{
 #materiaCompleta>ul{
     margin: 0 25px;
     list-style-type: none;
-    border-left: 2px solid brown;
+    border-left: 2px solid rgb(42, 54, 165);
     padding: 15px;
     font: 400 1.2em poppins,arial;
 }
@@ -396,11 +417,16 @@ mark{
 
 #materiaCompleta>h3{
     font: 600 2em poppins,arial;
+    text-align: left;
 }
 
 #vejaMais > h2{
     font: 500 1.5em poppins, arial;
     margin: 0px;
+}
+
+#materiaCompleta hr{
+    border: 1px solid gray;
 }
 
 /*     RESPONSIVIDADE    */
@@ -475,11 +501,19 @@ mark{
 
     header>.margem {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    #conta {
+        content: url(none);
+    }
+
+    .video{
+        display: none;
     }
 
     hr {
-        display: none;
+        margin: 10px 0;
     }
 
     #menuCabecalho {
@@ -492,17 +526,14 @@ mark{
 
     #menuCabecalho a {
         margin: 5px;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     #noticiaDoDia {
         flex-direction: column;
         align-items: center;
         margin: 5px;
-        
     }
-
-
 
     #noticiaDoDia>section {
         margin: 15px 0 0 0;
@@ -518,11 +549,6 @@ mark{
         width: 80%;
         text-align: center;
     }
-
-    #olaUser {
-        margin: 15px 0;
-    }
-
 
     .noticia>a {
         width: 100%;
@@ -577,6 +603,10 @@ mark{
         margin: 0;
     }
 
+    #materiaCompleta h1{
+        font-size: 1.8em;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -621,5 +651,11 @@ mark{
     footer button img {
         width: 35px;
     }
+
+    #materiaCompleta p{
+        font-size: 1.15em;
+    }
+
+
 }
 
