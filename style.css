@@ -31,7 +31,7 @@ header {
     padding: 10px 0;
 }
 
-header>.margem>img {
+header>.margem>a>img {
     width: 150px;
 }
 
